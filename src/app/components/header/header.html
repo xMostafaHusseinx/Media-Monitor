@@ -1,0 +1,15 @@
+<header class="header">
+  <div class="header__brand">
+    <span class="header__logo">📡</span>
+    <h1 class="header__title">Media Monitor</h1>
+  </div>
+  <div class="header__search">
+    <input
+      class="header__input"
+      type="text"
+      placeholder="Search headlines..."
+      [(ngModel)]="searchTerm"
+      (input)="onSearchInput()"
+    />
+  </div>
+</header>

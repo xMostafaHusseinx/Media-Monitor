@@ -1,0 +1,43 @@
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #16213e;
+  border-bottom: 1px solid #2a2a3e;
+
+  &__label {
+    color: #888;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  &__btn {
+    padding: 0.4rem 1rem;
+    border: 1px solid #444;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #aaa;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      border-color: #4a90d9;
+      color: #4a90d9;
+    }
+
+    &--active {
+      background-color: #4a90d9;
+      border-color: #4a90d9;
+      color: #ffffff;
+      font-weight: 600;
+    }
+  }
+}

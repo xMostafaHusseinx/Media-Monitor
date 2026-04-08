@@ -1,0 +1,14 @@
+<div class="card" [class]="'card card--' + article.sentiment">
+  <div class="card__header">
+    <span class="card__category">{{ article.category }}</span>
+    <span class="card__sentiment card__sentiment--{{ article.sentiment }}">
+      {{ article.sentiment }}
+    </span>
+  </div>
+  <h2 class="card__headline">{{ article.headline }}</h2>
+  <p class="card__summary">{{ article.summary }}</p>
+  <div class="card__footer">
+    <span class="card__source">{{ article.source }}</span>
+    <span class="card__date">{{ article.date }}</span>
+  </div>
+</div>

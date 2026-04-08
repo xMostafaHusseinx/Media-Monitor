@@ -1,0 +1,30 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: #0f0f1a;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    padding: 1.5rem 2rem;
+    flex: 1;
+  }
+
+  &__count {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  &__empty {
+    text-align: center;
+    color: #666;
+    margin-top: 3rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="dashboard">
+  <app-header (searchChanged)="onSearchChanged($event)"></app-header>
+
+  <app-stats-bar
+    [total]="totalCount"
+    [positive]="positiveCount"
+    [neutral]="neutralCount"
+    [negative]="negativeCount"
+  ></app-stats-bar>
+
+  <app-filter-bar (categoryChanged)="onCategoryChanged($event)"></app-filter-bar>
+
+  <main class="dashboard__content">
+    <p class="dashboard__count">
+      Showing {{ filteredArticles.length }} of {{ allArticles.length }} stories
+    </p>
+    <div class="dashboard__grid">
+      <app-media-card
+        *ngFor="let article of filteredArticles"
+        [article]="article"
+      ></app-media-card>
+    </div>
+    <p class="dashboard__empty" *ngIf="filteredArticles.length === 0">
+      No stories match your search.
+    </p>
+  </main>
+</div>

@@ -1,0 +1,13 @@
+<div class="filter-bar">
+  <span class="filter-bar__label">Filter by:</span>
+  <div class="filter-bar__buttons">
+    <button
+      *ngFor="let category of categories"
+      class="filter-bar__btn"
+      [class.filter-bar__btn--active]="selectedCategory === category"
+      (click)="onCategoryClick(category)"
+    >
+      {{ category }}
+    </button>
+  </div>
+</div>
