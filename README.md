@@ -1,59 +1,91 @@
-# MediaMonitor
+# Media Monitor Dashboard
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+A responsive media monitoring dashboard built with Angular, TypeScript, SCSS, and BEM methodology. Inspired by the kind of media intelligence tools used in public relations and communications platforms.
 
-## Development server
+---
 
-To start a local development server, run:
+## Features
 
-```bash
+- Real-time search filtering across headlines and summaries
+- Category filtering by Technology, Politics, Business, Health, and Entertainment
+- Sentiment analysis display — each story is tagged Positive, Neutral, or Negative
+- Stats bar showing total stories and sentiment breakdown at a glance
+- Color-coded media cards with hover animations
+- Fully responsive grid layout that adapts to any screen size
+
+---
+
+## Project Structure
+
+```
+media-monitor/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── header/          # Search bar and app title
+│   │   │   ├── stats-bar/       # Sentiment count summary
+│   │   │   ├── filter-bar/      # Category filter buttons
+│   │   │   └── media-card/      # Individual story card
+│   │   ├── services/
+│   │   │   └── media.service.ts # Data provider and filtering logic
+│   │   ├── models/
+│   │   │   └── article.model.ts # TypeScript interfaces and types
+│   │   └── app.ts               # Root component
+│   ├── main.ts                  # Application entry point
+│   └── styles.scss              # Global styles
+├── angular.json                 # Angular CLI configuration
+├── package.json                 # Project dependencies
+└── tsconfig.json                # TypeScript configuration
+```
+
+---
+
+## Technologies Used
+
+- Angular 21 — component-based frontend framework
+- TypeScript — typed superset of JavaScript
+- SCSS with BEM methodology — structured and maintainable styling
+- Angular Dependency Injection — service-based data architecture
+- CSS Grid — responsive layout
+
+## Key Concepts Demonstrated
+
+- Component architecture with `@Input()` and `@Output()` bindings
+- Two-way data binding with `[(ngModel)]`
+- Structural directives `*ngFor` and `*ngIf`
+- Angular services and Dependency Injection
+- TypeScript interfaces, union types, and type safety
+- SCSS nesting and BEM naming convention
+- Reactive filtering combining search and category simultaneously
+
+---
+
+## How To Run
+
+**1. Clone the repository:**
+```
+git clone https://github.com/xMostafaHusseinx/Media-Monitor.git
+cd Media-Monitor
+```
+
+**2. Install dependencies:**
+```
+npm install
+```
+
+**3. Start the development server:**
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+**4. Open your browser at:**
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## Author
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Mostafa Aly Sayed Aly Hussein
